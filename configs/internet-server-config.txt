@@ -1,0 +1,11 @@
+# Simulated Internet Server
+IP address: 8.8.8.8
+Subnet mask: 255.255.255.0
+Default gateway: 8.8.8.1
+
+Services used:
+- HTTP: On
+- HTTPS: On
+- DNS: Optional for lab hostname testing
+
+This is a Packet Tracer simulated Internet endpoint, not the real public Internet.

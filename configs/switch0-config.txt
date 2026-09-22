@@ -1,0 +1,40 @@
+! Switch0 - Campus Access/Trunk Configuration
+enable
+configure terminal
+
+vlan 10
+ name ADMIN
+exit
+vlan 20
+ name IT
+exit
+vlan 30
+ name ACCOUNTS
+exit
+vlan 40
+ name STUDENTS
+exit
+
+interface fastEthernet 0/1
+ switchport mode access
+ switchport access vlan 10
+exit
+interface fastEthernet 0/2
+ switchport mode access
+ switchport access vlan 20
+exit
+interface fastEthernet 0/3
+ switchport mode access
+ switchport access vlan 30
+exit
+interface fastEthernet 0/4
+ switchport mode access
+ switchport access vlan 40
+exit
+
+interface gigabitEthernet 0/1
+ switchport mode trunk
+ switchport trunk allowed vlan 10,20,30,40
+exit
+
+end
